@@ -39,10 +39,11 @@ export const profile = {
   // Role types you want recruiters to associate you with.
   openTo: ['Digital Transformation', 'Business Intelligence', 'Data Analytics', 'Automation'],
 
-  // ⚠️ TODO: fill these in before publishing. Empty values are hidden.
-  // Use a personal email for a public site rather than a work address.
+  // Empty values are hidden on the site.
   contact: {
-    email: '',
+    email: 'adrian.lee@sandvik.com',
+    phone: '019-2106099', // shown as written
+    phoneIntl: '+60192106099', // used for the tap-to-call link
     linkedin: '', // e.g. 'https://www.linkedin.com/in/your-handle'
     github: '', // e.g. 'https://github.com/your-handle'
     resumeUrl: '', // e.g. './Adrian-Lee-CV.pdf' (place the file in /public)

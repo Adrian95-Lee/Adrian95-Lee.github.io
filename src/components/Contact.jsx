@@ -1,11 +1,12 @@
-import { ArrowUpRight, FileText, Github, Linkedin, Mail, MapPin } from 'lucide-react'
+import { ArrowUpRight, FileText, Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react'
 import Section, { Reveal } from './Section'
 import { profile } from '../data/profile'
 
 export default function Contact() {
-  const { email, linkedin, github, resumeUrl } = profile.contact
+  const { email, phone, phoneIntl, linkedin, github, resumeUrl } = profile.contact
   const links = [
     email && { label: 'Email', value: email, href: `mailto:${email}`, icon: Mail },
+    phone && { label: 'Mobile', value: phone, href: `tel:${phoneIntl || phone.replace(/[^\d+]/g, '')}`, icon: Phone },
     linkedin && { label: 'LinkedIn', value: linkedin.replace(/^https?:\/\/(www\.)?/, ''), href: linkedin, icon: Linkedin },
     github && { label: 'GitHub', value: github.replace(/^https?:\/\/(www\.)?/, ''), href: github, icon: Github },
     resumeUrl && { label: 'Résumé', value: 'Download CV', href: resumeUrl, icon: FileText },
